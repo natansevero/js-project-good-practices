@@ -1,0 +1,15 @@
+{
+  "name": "section1-boas-praticas",
+  "version": "1.0.0",
+  "description": "Lib do curso de JS com TDD na prática",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "tdd"
+  ],
+  "author": "Natan Severo <natanseverolp@gmail.com> (https://twitter.com/natan_severo)",
+  "license": "MIT"
+}
