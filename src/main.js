@@ -1,5 +1,5 @@
 const a = 2;
-const b = 'dbius';
+const b = 4
 
 function sum() {
     return a + b;
