@@ -11,5 +11,10 @@
     "tdd"
   ],
   "author": "Natan Severo <natanseverolp@gmail.com> (https://twitter.com/natan_severo)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
 }
