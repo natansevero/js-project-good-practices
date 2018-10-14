@@ -1,15 +1,24 @@
 {
-    "name": "section1-boas-praticas",
+    "name": "js-project",
     "version": "1.0.0",
     "description": "Lib do curso de JS com TDD na prática",
     "main": "index.js",
     "scripts": {
         "lint": "./node_modules/.bin/eslint src/*.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "mocha tests/**/*.spec.js --require babel-register",
+        "test:tdd": "mocha tests/**/*.spec.js --require babel-register --watch",
+        "test:coverage": "nyc npm test"
+    },
+    "nyc": {
+        "functions": 80,
+        "lines": 80,
+        "check-coverage": true,
+        "reporter": ["text", "html"],
+        "exclude": ["tests/**"]
     },
     "husky": {
         "hooks": {
-            "pre-push": "npm run lint"
+            "pre-push": "npm run lint && npm run test:coverage"
         }
     },
     "keywords": [
@@ -19,9 +28,15 @@
     "author": "Natan Severo <natanseverolp@gmail.com> (https://twitter.com/natan_severo)",
     "license": "MIT",
     "devDependencies": {
+        "babel-preset-env": "^1.7.0",
+        "babel-register": "^6.26.0",
+        "chai": "^4.2.0",
         "eslint": "^5.6.0",
         "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-plugin-chai-friendly": "^0.4.1",
         "eslint-plugin-import": "^2.14.0",
-        "husky": "^1.0.0-rc.15"
+        "husky": "^1.0.0-rc.15",
+        "mocha": "^5.2.0",
+        "nyc": "^13.0.1"
     }
 }
